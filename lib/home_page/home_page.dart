@@ -3,21 +3,21 @@ import 'package:musicapp_flutter/model/bottom_bar.dart';
 import 'package:musicapp_flutter/model/list_track.dart';
 import 'package:musicapp_flutter/player_page/player_page1.dart';
 
-const List<String> listImage = <String>[
+final listImage = <String>[
   'Album.png',
   'Album2.png',
   'Album.png',
   'Album2.png',
   'Album.png'
 ];
-const List<Color> listColor = <Color>[
+final listColor = <Color>[
   Colors.amber,
   Colors.orange,
   Colors.red,
   Colors.orange,
   Colors.red
 ];
-const List<String> listTrack = <String>[
+final listTrack = <String>[
   'Music1.png',
   'Music2.png',
   'Music3.png',
@@ -28,7 +28,7 @@ const List<String> listTrack = <String>[
   'Music2.png',
   'Music3.png'
 ];
-const List<String> listTitle = <String>[
+final listTitle = <String>[
   'The Last beat',
   'See you again',
   'You are my sunshine',
@@ -39,7 +39,7 @@ const List<String> listTitle = <String>[
   'See you again',
   'You are my sunshine'
 ];
-const List<String> listDuration = <String>[
+final listDuration = <String>[
   '3:30',
   '3:45',
   '5:00',

@@ -13,6 +13,19 @@ class _ListTrackState extends State<ListTrack> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ReorderableListView.builder(
+        onReorder: (int oldIndex, int newIndex) {
+          setState(() {
+            if (oldIndex < newIndex) {
+              newIndex -= 1;
+            }
+            final item = listTrack.removeAt(oldIndex);
+            listTrack.insert(newIndex, item);
+            final item2 = listTitle.removeAt(oldIndex);
+            listTitle.insert(newIndex, item2);
+            final item3 = listDuration.removeAt(oldIndex);
+            listDuration.insert(newIndex, item3);
+          });
+        },
         itemCount: listTrack.length,
         scrollDirection: Axis.vertical,
         itemBuilder: (BuildContext context, int index) {
@@ -44,7 +57,6 @@ class _ListTrackState extends State<ListTrack> {
             ),
           ]);
         },
-        onReorder: (int oldIndex, int newIndex) {},
       ),
     );
   }
